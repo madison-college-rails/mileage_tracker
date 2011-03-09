@@ -1,0 +1,27 @@
+<h1>Listing vehicles</h1>
+
+<table>
+  <tr>
+    <th>Color</th>
+    <th>Year</th>
+    <th>License plate number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vehicles.each do |vehicle| %>
+  <tr>
+    <td><%= vehicle.color %></td>
+    <td><%= vehicle.year %></td>
+    <td><%= vehicle.license_plate_number %></td>
+    <td><%= link_to 'Show', vehicle %></td>
+    <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+    <td><%= link_to 'Destroy', vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vehicle', new_vehicle_path %>
