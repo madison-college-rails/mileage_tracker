@@ -2,6 +2,7 @@ class VehiclesController < ApplicationController
   # GET /vehicles
   # GET /vehicles.xml
   def index
+    @title = "My Vehicles"
     @vehicles = Vehicle.all
 
     respond_to do |format|
