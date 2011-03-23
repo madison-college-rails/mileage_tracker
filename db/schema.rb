@@ -10,10 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110323014057) do
+ActiveRecord::Schema.define(:version => 20110323015520) do
 
   create_table "makes", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mileages", :force => true do |t|
+    t.integer  "vehicle_id"
+    t.time     "filled_tank_at"
+    t.decimal  "miles",          :precision => 10, :scale => 2
+    t.decimal  "gallons",        :precision => 10, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -26,6 +26,7 @@ class VehiclesController < ApplicationController
   # GET /vehicles/new.xml
   def new
     @vehicle = Vehicle.new
+    @models = Model.all
 
     respond_to do |format|
       format.html # new.html.erb
