@@ -10,7 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110309012441) do
+ActiveRecord::Schema.define(:version => 20110323014057) do
+
+  create_table "makes", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "models", :force => true do |t|
+    t.integer  "make_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "vehicles", :force => true do |t|
     t.string   "color"
@@ -18,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20110309012441) do
     t.string   "license_plate_number"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "model_id"
   end
 
 end
