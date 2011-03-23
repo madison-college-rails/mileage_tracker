@@ -1,2 +1,2 @@
 rvm_gemset_create_on_use_flag=1
-rvm gemset use 1.8.7@mileage_tracker
+rvm gemset use 1.9.2@mileage_tracker
