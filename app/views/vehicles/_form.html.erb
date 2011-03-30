@@ -12,17 +12,25 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :model_id %><br/>
+    <%= f.collection_select :model_id, @models, :id, :name, :prompt => 'Please select model' %>
+  </div>
+
+  <div class="field">
     <%= f.label :color %><br />
     <%= f.text_field :color %>
   </div>
+
   <div class="field">
     <%= f.label :year %><br />
     <%= f.text_field :year %>
   </div>
+
   <div class="field">
     <%= f.label :license_plate_number %><br />
     <%= f.text_field :license_plate_number %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
