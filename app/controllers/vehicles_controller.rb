@@ -78,7 +78,7 @@ class VehiclesController < ApplicationController
     @vehicle.destroy
 
     respond_to do |format|
-      format.html { redirect_to(vehicles_url) }
+      format.html { redirect_to(vehicles_url, :notice => 'Vehicle successfully deleted') }
       format.xml  { head :ok }
     end
   end
