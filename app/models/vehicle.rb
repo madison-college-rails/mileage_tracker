@@ -2,9 +2,13 @@ class Vehicle < ActiveRecord::Base
   belongs_to :model
   has_many :mileages
   delegate :make, :to => :model
-  
+
   def make_and_model
     "#{make.name} #{model.name}"
+  end
+
+  def display_name
+    "#{make_and_model} - #{license_plate_number}"
   end
 end
 
