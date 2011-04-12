@@ -7,3 +7,18 @@ class Vehicle < ActiveRecord::Base
     "#{make.name} #{model.name}"
   end
 end
+
+# == Schema Information
+# Schema version: 20110323015520
+#
+# Table name: vehicles
+#
+#  id                   :integer         not null, primary key
+#  color                :string(255)
+#  year                 :integer
+#  license_plate_number :string(255)
+#  created_at           :datetime
+#  updated_at           :datetime
+#  model_id             :integer
+#
+
