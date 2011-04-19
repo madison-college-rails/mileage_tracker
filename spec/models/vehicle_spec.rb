@@ -28,4 +28,14 @@ describe Vehicle do
     end
   end
 
+  describe 'display_name method' do
+    let(:toyota) { Make.create! :name => 'Toyota' }
+    let(:prius) { Model.create! :make => toyota, :name => 'Prius' }
+    let(:vehicle) { Vehicle.create! :model => prius, :license_plate_number => 'VROOM' }
+
+    it 'should return the formatted make, model and license' do
+      vehicle.display_name.should == 'Toyota Prius - VROOM'
+    end
+  end
+
 end

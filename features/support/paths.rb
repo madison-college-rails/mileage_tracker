@@ -11,6 +11,13 @@ module NavigationHelpers
     when /the home\s?page/
       '/'
 
+    when /^the mileages page$/
+      '/mileages'
+
+    when /^the mileage show page for #{capture_model}$/
+      mileage = find_model! $1
+      mileage_path mileage
+
     when /^the vehicle show page for #{capture_model}$/
       vehicle = find_model! $1
       vehicle_path vehicle
