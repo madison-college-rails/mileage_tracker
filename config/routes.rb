@@ -1,5 +1,6 @@
 MileageTracker::Application.routes.draw do
   resources :vehicles
+  resources :mileages, :only => [:index, :new, :create]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
