@@ -3,16 +3,16 @@
 <form action="/mileages" class="new_mileage" id="new_mileage" method="post"><div style="margin:0;padding:0;display:inline"></div>
 
   <div class="field">
-    Vehicle<br/>
-    <select name="vehicle_id">
+    <label for="vehicle_id">Vehicle</label><br />
+    <select id="vehicle_id" name="vehicle_id">
       <option value="">Please select a vehicle</option>
       <option value="Z00M">Ford Mustang - Z00M</option>
       <option value="MATC1">Toyota Camry - MATC1</option>
     </select>
   </div>
   <div class="field">
-    Filled tank on<br/>
-    <select name="filled_tank_on_year">
+    <label for="filled_tank_on_year">Filled tank on</label><br />
+    <select id="filled_tank_on_year" name="filled_tank_on_year">
       <option value="2006">2006</option>
       <option value="2007">2007</option>
       <option value="2008">2008</option>
@@ -21,7 +21,7 @@
       <option selected="selected" value="2011">2011</option>
       <option value="2012">2012</option>
     </select>
-    <select name="filled_tank_on_month">
+    <select id="filled_tank_on_month" name="filled_tank_on_month">
       <option value="1">January</option>
       <option value="2">February</option>
       <option value="3">March</option>
@@ -35,7 +35,7 @@
       <option value="11">November</option>
       <option value="12">December</option>
     </select>
-    <select name="filled_tank_on_day">
+    <select id="filled_tank_on_day" name="filled_tank_on_day">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -68,16 +68,18 @@
       <option value="30">30</option>
       <option value="31">31</option>
     </select>
+  </div>
 
-  </div>
   <div class="field">
-    Miles<br/>
-    <input name="miles" size="30" type="text" />
+    <label for="miles">Miles</label><br />
+    <input id="miles" name="miles" size="30" type="text" />
   </div>
+
   <div class="field">
-    Gallons<br/>
-    <input name="gallons" size="30" type="text" />
+    <label for="gallons">Gallons</label><br />
+    <input id="gallons" name="gallons" size="30" type="text" />
   </div>
+
   <div class="actions">
     <input id="submit" name="commit" type="submit" value="Create Mileage" />
   </div>
