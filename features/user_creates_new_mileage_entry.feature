@@ -12,15 +12,13 @@ Feature: User creates new mileage entry
   And I am on the mileages page
 
   When I follow "New Mileage"
-    # And I select "Ford Mustang - Z00M" from "Vehicle"
-    And I select "Ford Mustang - Z00M" from "vehicle_id"
+    And I select "Ford Mustang - Z00M" from "Vehicle"
+    # old And I select "Ford Mustang - Z00M" from "vehicle_id"
     And I select "April" from "mileage_filled_tank_on_2i"
     And I select "12" from "mileage_filled_tank_on_3i"
     And I select "2011" from "mileage_filled_tank_on_1i"
-    # And I fill in "Miles" with "294.3"
-    And I fill in "miles" with "294.3"
-    # And I fill in "Gallons" with "18"
-    And I fill in "gallons" with "18"
+    And I fill in "Miles" with "294.3"
+    And I fill in "Gallons" with "18"
   And I press "Create Mileage"
 
   Then I should see "Mileage entry was successfully created"

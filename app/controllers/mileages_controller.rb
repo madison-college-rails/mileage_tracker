@@ -5,20 +5,22 @@ class MileagesController < ApplicationController
 
   def show
   end
+  
+  def new
+    @mileage = Mileage.new
+    @vehicles = Vehicle.all
+  end
 
   def create
-  license_plate_number = params[:mileage][:vehicle_id]
-  vehicle = Vehicle.find_by_license_plate_number(license_plate_number)
-  params[:mileage][:vehicle_id] = vehicle.id
-  # params[:mileage][:filled_tank_on] = build_date(params[:mileage][:filled_tank_on])
+    mileage = Mileage.new(params[:mileage])
 
-  mileage = Mileage.new(params[:mileage])
+    if mileage.save
+      flash[:notice] = 'Mileage entry was successfully created'
+      redirect_to mileages_path
+    else
+      @vehicles = Vehicle.all
+      render :action => 'new'
+    end
+  end
 
-  if mileage.save
-    flash[:notice] = 'Mileage entry was successfully created'
-    redirect_to mileages_path
-  else
-    render :action => 'new'
-  end
-  end
 end

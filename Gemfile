@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
-# gem 'linecache19'
+gem 'linecache19'
 gem 'jquery-rails'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
@@ -13,7 +13,7 @@ group :development do
 end
 
 group :development, :test do
-  # gem 'ruby-debug19'
+  gem 'ruby-debug19'
   gem 'rspec-rails'
     gem 'shoulda'
 
