@@ -4,7 +4,7 @@
 
   <div class="field">
     <label for="vehicle_id">Vehicle</label><br />
-    <select id="vehicle_id" name="vehicle_id">
+    <select id="vehicle_id" name="mileage[vehicle_id]">
       <option value="">Please select a vehicle</option>
       <option value="Z00M">Ford Mustang - Z00M</option>
       <option value="MATC1">Toyota Camry - MATC1</option>
@@ -12,7 +12,7 @@
   </div>
   <div class="field">
     <label for="filled_tank_on_year">Filled tank on</label><br />
-    <select id="filled_tank_on_year" name="filled_tank_on_year">
+    <select id="filled_tank_on_year" name="mileage[filled_tank_on][year]">
       <option value="2006">2006</option>
       <option value="2007">2007</option>
       <option value="2008">2008</option>
@@ -21,7 +21,7 @@
       <option selected="selected" value="2011">2011</option>
       <option value="2012">2012</option>
     </select>
-    <select id="filled_tank_on_month" name="filled_tank_on_month">
+    <select id="filled_tank_on_month" name="mileage[filled_tank_on][month]">
       <option value="1">January</option>
       <option value="2">February</option>
       <option value="3">March</option>
@@ -35,7 +35,7 @@
       <option value="11">November</option>
       <option value="12">December</option>
     </select>
-    <select id="filled_tank_on_day" name="filled_tank_on_day">
+    <select id="filled_tank_on_day" name="mileage[filled_tank_on][day]">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -72,12 +72,12 @@
 
   <div class="field">
     <label for="miles">Miles</label><br />
-    <input id="miles" name="miles" size="30" type="text" />
+    <input id="miles" name="mileage[miles]" size="30" type="text" />
   </div>
 
   <div class="field">
     <label for="gallons">Gallons</label><br />
-    <input id="gallons" name="gallons" size="30" type="text" />
+    <input id="gallons" name="mileage[gallons]" size="30" type="text" />
   </div>
 
   <div class="actions">
