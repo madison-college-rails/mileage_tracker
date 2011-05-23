@@ -13,7 +13,6 @@ Feature: User creates new mileage entry
 
   When I follow "New Mileage"
     And I select "Ford Mustang - Z00M" from "Vehicle"
-    # old And I select "Ford Mustang - Z00M" from "vehicle_id"
     And I select "April" from "mileage_filled_tank_on_2i"
     And I select "12" from "mileage_filled_tank_on_3i"
     And I select "2011" from "mileage_filled_tank_on_1i"

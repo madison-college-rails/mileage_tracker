@@ -5,7 +5,7 @@ class MileagesController < ApplicationController
 
   def show
   end
-  
+
   def new
     @mileage = Mileage.new
     @vehicles = Vehicle.all
