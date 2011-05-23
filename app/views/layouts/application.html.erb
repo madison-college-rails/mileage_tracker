@@ -20,7 +20,7 @@
       <div id="main-navigation">
         <ul class="wat-cf"></ul>
       </div>
-    </div>    
+    </div>
     <div id="wrapper" class="wat-cf">
       <div class="flash">
         <% flash.each do |type, message| -%>
@@ -33,14 +33,14 @@
         <%= yield %>
         <div id="footer">
           <div class="block">
-            <p>Copyright &copy; <%= Time.now.year %> Mileage Tracker.</p>
-          </div>      
+            <p>Copyright <%= Time.now.year %> Mileage Tracker.</p>
+          </div>
         </div>
       </div>
       <div id="sidebar">
         <%= yield :sidebar %>
       </div>
-    </div>    
+    </div>
   </div>
 </body>
 </html>
