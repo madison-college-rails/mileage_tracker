@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
-gem 'linecache19'
-gem 'jquery-rails'
+gem 'rails', '3.0.11'
+# gem 'linecache19'
+# gem 'jquery-rails'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
@@ -22,9 +22,9 @@ group :development, :test do
   gem 'autotest-standalone', :require => 'autotest'
   gem 'autotest-rails-pure'
   gem 'factory_girl_rails', '1.0'
-  gem 'cucumber-rails'
-    gem 'capybara'
-    gem 'database_cleaner'
-    gem 'pickle'
-    gem 'pickler'
+  # gem 'cucumber-rails'
+  #  gem 'capybara'
+  #  gem 'database_cleaner'
+  #  gem 'pickle'
+  #  gem 'pickler'
 end
