@@ -1,0 +1,32 @@
+<h1>New Mileage</h1>
+
+<form action="/mileages" class="new_mileage" id="new_mileage" method="post">
+
+  <div class="field">
+    <label for="mileage_vehicle_id">Vehicle</label><br />
+    
+    <%= select_tag "mileage[vehicle_id]", options_from_collection_for_select(@vehicles,
+    "id", "display_name") %>
+  </div>
+  
+  <div class="field">
+    <label for="mileage_filled_tank_on_2i">Filled tank on</label><br/>
+    <%= date_select :mileage, :filled_tank_on, :order => [:month, :day, :year] %>
+  </div>
+
+  <div class="field">
+    <label for="mileage_miles">Miles</label><br />
+    <%= text_field_tag "mileage[miles]" %>
+  </div>
+
+  <div class="field">
+    <label for="mileage_gallons">Gallons</label><br />
+    <%= text_field_tag "mileage[gallons]" %>
+  </div>
+
+  <div class="actions">
+    <input id="submit" name="commit" type="submit" value="Create Mileage" />
+  </div>
+</form>
+
+<a href="/mileages">List</a>

@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+<div style="float:left; width: 40%">
+<p>
+  <b>Make and Model:</b>
+  <%= @vehicle.make_and_model %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @vehicle.color %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @vehicle.year %>
+</p>
+
+<p>
+  <b>License plate number:</b>
+  <%= @vehicle.license_plate_number %>
+</p>
+</div>
+<div>
+<!-- insert the mileage form here -->
+
+</div>
+<div style="clear:both;">
+<h1>Mileages</h1>
+
+<table>
+  <tr>
+    <td>Date Filled</td>
+    <td>Miles</td>
+    <td>Gallons</td>
+  </tr>
+<!-- display the mileages here. You do not need to use a partial -->
+</table>
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'List', vehicles_path %>
+
+

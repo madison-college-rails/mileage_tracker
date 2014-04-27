@@ -1,0 +1,20 @@
+<h1>Mileages</h1>
+
+<table>
+  <tr>
+    <td>Vehicle</td>
+    <td>Date Filled</td>
+    <td>Miles</td>
+    <td>Gallons</td>
+  </tr>
+  <% @mileages.each do |mileage| %>
+    <tr>
+      <td><%= mileage.vehicle.try(:display_name) %></td>
+      <td><%= mileage.filled_tank_on %></td>
+      <td><%= mileage.miles %></td>
+      <td><%= mileage.gallons %></td>
+    </tr>
+  <% end %>
+</table>
+
+<a href="/mileages/new">New Mileage</a>
