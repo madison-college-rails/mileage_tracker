@@ -19,6 +19,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'pickle'
   gem 'pickler'
+  gem 'pry-debugger'
   gem 'rspec-rails'
   gem 'shoulda'
 end
