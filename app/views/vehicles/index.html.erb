@@ -17,7 +17,7 @@
     <td><%= vehicle.license_plate_number %></td>
     <td><%= link_to 'Show', vehicle %></td>
     <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
-    <td><%= link_to 'Delete', vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', vehicle, data: { confirm: 'Are you sure?' }, method: :delete %></td>
   </tr>
 <% end %>
 </table>
