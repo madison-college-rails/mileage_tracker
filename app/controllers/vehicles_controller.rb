@@ -44,7 +44,7 @@ class VehiclesController < ApplicationController
   # POST /vehicles
   # POST /vehicles.xml
   def create
-    @vehicle = Vehicle.new(params[:vehicle])
+    @vehicle = Vehicle.new(vehicle_params)
 
     respond_to do |format|
       if @vehicle.save
@@ -63,7 +63,7 @@ class VehiclesController < ApplicationController
     @vehicle = Vehicle.find(params[:id])
 
     respond_to do |format|
-      if @vehicle.update_attributes(params[:vehicle])
+      if @vehicle.update_attributes(vehicle_params)
         format.html { redirect_to(@vehicle, :notice => 'Vehicle was successfully updated.') }
         format.xml  { head :ok }
       else
@@ -83,5 +83,11 @@ class VehiclesController < ApplicationController
       format.html { redirect_to(vehicles_url, :notice => 'Vehicle successfully deleted') }
       format.xml  { head :ok }
     end
+  end
+
+  private
+
+  def vehicle_params
+    params.require(:vehicle).permit(:model_id, :color, :year, :license_plate_number)
   end
 end

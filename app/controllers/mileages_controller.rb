@@ -12,7 +12,7 @@ class MileagesController < ApplicationController
   end
 
   def create
-    mileage = Mileage.new(params[:mileage])
+    mileage = Mileage.new(mileage_params)
 
     if mileage.save
       flash[:notice] = 'Mileage entry was successfully created'
@@ -23,4 +23,9 @@ class MileagesController < ApplicationController
     end
   end
 
+  private
+
+  def mileage_params
+    params.require(:mileage).permit(:vehicle_id, :miles, :gallons, :filled_tank_on)
+  end
 end
