@@ -20,7 +20,8 @@ Feature: User creates new vehicle
       And I fill in "License plate number" with "ABC123"
       And I press "Create Vehicle"
 
-    Then I should see "Vehicle was successfully created"
+    Then a vehicle should exist
+      And I should see "Vehicle was successfully created"
       And I should be on the vehicle show page for the vehicle
       And I should see "2002"
       And I should see "Blue"
